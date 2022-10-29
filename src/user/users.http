@@ -1,0 +1,8 @@
+GET http://localhost:3333/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdDJAdGVzdC5jb20iLCJpYXQiOjE2NjcwMzQwMjUsImV4cCI6MTY2NzAzNDkyNX0.PIu0y29IbIbERNjrtmXZY8CYtJ7zJHsNsUBc6vYYppg
+
+### 
+
+
+GET http://localhost:3333/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdDJAdGVzdC5jb20iLCJpYXQiOjE2NjcwMzQwMjUsImV4cCI6MTY2NzAzNDkyNX0.PIu0y29IbIbERNjrtmXZY8CYtJ7zJHsNsUBc6vYYppg

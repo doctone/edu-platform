@@ -1,0 +1,10 @@
+### 
+
+GET http://localhost:3333/teachers
+### 
+
+POST http://localhost:3333/teachers
+
+{
+    email: "teacher1@teacher.co.uk"
+}

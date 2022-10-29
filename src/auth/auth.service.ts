@@ -9,6 +9,7 @@ import * as argon from 'argon2';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
+import { v4 as uuid } from 'uuid';
 
 @Injectable()
 export class AuthService {
@@ -22,6 +23,7 @@ export class AuthService {
     try {
       const user = await this.prisma.user.create({
         data: {
+          id: uuid(),
           email: dto.email,
           hash,
         },

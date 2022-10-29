@@ -1,13 +1,22 @@
-import { Controller, Get, Param } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { AddTeacherDto } from './AddTeacher.dto';
+import { TeacherRepository } from './teacher.repository';
 
-@Controller('teacher')
+@Controller('teachers')
 export class TeacherController {
-  constructor(private prisma: PrismaService) {}
+  constructor(private teacherRepo: TeacherRepository) {}
   @Get(':id')
   getById(@Param() id: string) {
-    return {
-      id,
-    };
+    this.teacherRepo.getById(id);
+  }
+
+  @Get()
+  getTeachers() {
+    return this.teacherRepo.getAll();
+  }
+
+  @Post()
+  AddTeacher(@Body() dto: AddTeacherDto) {
+    return dto;
   }
 }
